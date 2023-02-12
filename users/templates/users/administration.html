@@ -1,0 +1,22 @@
+{% extends "records/base2.html" %}
+{% load static %}
+{% block content %}
+Действующие записи
+{% for record in records %}
+<p> Время: {{ record.time }} Дата: {{ record.date }} ID:{{ record.id }} </p>
+<a href="{% url 'records:delete_record' record.id %}">Удалить запись</a>
+{% endfor %}
+<li class="nav-item">
+    <a href="{% url 'records:record_add' %}">
+        Добавить новую запись
+    </a>
+</li>
+База данных пользователей
+{% for user in users %}
+<p>
+    <a href="{% url 'users:profile' user.id %}">{{ user.username }}</a> - {{ user.first_name }} {{ user.last_name }} Номер телефона: {{ user.telephon_number}}
+    Дата регистрации: {{ user.date_joined}} Последний вход: {{ user.last_login}}
+</p>
+{% endfor %}
+
+{% endblock content %}

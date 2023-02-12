@@ -1,0 +1,26 @@
+{% extends "records/base2.html" %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="block-show-records">
+    <div class="container">
+        <div class="show-records">
+            <div class="show-records-time">
+                Время: {{ record.time }}
+            </div>
+            <div class="show-records-date">
+                Дата: {{ record.date }}
+            </div>
+             <div>
+                <form class="form-show-record" action="{% url 'records:record_occupied' record.pk %}" method="post">
+                {% csrf_token %}
+                <button class="btn-show-record" type="submit"><span>Подтвердить запись!</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

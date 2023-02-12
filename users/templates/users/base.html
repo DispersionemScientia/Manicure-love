@@ -1,0 +1,69 @@
+{% load bootstrap4 %}
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Маникюр_Люба</title>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-ligth bg-light mb-4 border">
+    <a class="navbar-brand" href="{% url 'records:home' %}">
+        Дом
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'records:records' %}">
+                    Записи
+                </a>
+            </li>
+            {% if user.is_admin %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'users:administration' %}">
+                    Администрирование
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+        <ul class="navbar-nav ml auto">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <span class="navbar-text"}>Здравствуйте, {{ user.username }}.</span>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'users:profile' user.id %}">Профиль</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'users:logout' %}">Выход</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'users:register' %}">Регистрация</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'users:login' %}">Вход</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+    <div class="pb-2 mb-2 border-bottom">
+        {% block page_header %}{% endblock page_header %}
+    </div>
+    <div>
+        {% block content %}{% endblock content %}
+    </div>
+</main>
+</body>
+</html>

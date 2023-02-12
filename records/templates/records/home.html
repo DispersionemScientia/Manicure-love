@@ -1,0 +1,102 @@
+{% extends "records/base2.html" %}
+{% load static %}
+{% block content %}
+<div class="background-home">
+<div class="block-record">
+    <div class="container">
+        <div class="about-me">
+            <div class="about-me-left">
+                <div class="about-me-left-title">
+                    <h2>
+                        Обо мне
+                    </h2>
+                </div>
+                <div div class="about-me-left-text">
+                    <p>Маникю́р (от лат. manus — кисть и cūra — уход) — косметическая процедура по обработке ногтей на пальцах рук и самих кистей рук для лохов, а то и всей руки. Маникюр выполняется как в салонах красоты или косметологических кабинетах квалифицированными специалистами, так и в домашних условиях ради лохов. Маникюр часто совмещается с педикюром, уходом за кожей лица, парикмахерскими процедурами (стрижка, окрашивание волос и прочие виды ухода за волосами). Часто под словом «маникюр» понимают внешний вид лохов, обработку только ногтей. Выбор цвета лака для ногтей нередко диктуется модой[1].</p>
+                </div>
+            </div>
+            <div class="about-me-right">
+                <div class="my-photo-block">
+                    <img class="my-photo" src="{% static 'my.jpg' %}">
+                </div>
+                <div class="button">
+                <a href="{% url 'records:records' %}">Записаться онлайн</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="block-my-works">
+    <div class="container">
+        <div class="title-my-work">
+            <h2>Мои работы</h2>
+        </div>
+        <div>
+            <div class="line-photo-one">
+                <div class="photo-card">
+                    <img class="photo" src="{% static 'work1.jpg' %}">
+                </div>
+                <div class="photo-card">
+                    <img class="photo" src="{% static 'work2.jpg' %}">
+                </div>
+                <div class="photo-card">
+                    <img class="photo" src="{% static 'work2.jpg' %}">
+                </div>
+                <div class="photo-card">
+                    <img class="photo" src="{% static 'work1.jpg' %}">
+                </div>
+                <div class="photo-card">
+                    <img class="photo" src="{% static 'work1.jpg' %}">
+                </div>
+                <div class="photo-card">
+                    <img class="photo" src="{% static 'work1.jpg' %}">
+                </div>
+                <div class="photo-card">
+                    <img class="photo" src="{% static 'work1.jpg' %}">
+                </div>
+                <div class="photo-card">
+                    <img class="photo" src="{% static 'work1.jpg' %}">
+                </div>
+                <div class="photo-card">
+                    <img class="photo" src="{% static 'work1.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="block-price">
+    <div class="container">
+        <div class="price-list">
+            <img class="price" src="{% static 'price.jpg' %}">
+        </div>
+    </div>
+</div>
+
+<div class="block-end">
+    <div class="container-end">
+        <div class="contact">
+            <div class="phone-number">
+                <div >
+                    <img class="phone" src="{% static 'phone.webp' %}">
+                </div>
+                <div class="number">
+                    <span>+7-(903)-833-93-20</span>
+                </div>
+            </div>
+            <div class="mail-adress">
+                <div >
+                    <img class="mail" src="{% static 'mail.png' %}">
+                </div>
+                <div class="number">
+                    <span>manicurelovet@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+{% endblock content %}

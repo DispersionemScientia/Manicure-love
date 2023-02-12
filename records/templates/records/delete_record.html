@@ -1,0 +1,10 @@
+{% extends "records/base2.html" %}
+
+{% block content %}
+Вы точно хотите удалить запись?
+<p>Время: {{ record.time }} Дата: {{ record.date }}</p>
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Удалить запись">
+</form>
+{% endblock content %}

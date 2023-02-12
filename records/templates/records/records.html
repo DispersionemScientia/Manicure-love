@@ -1,0 +1,83 @@
+{% extends "records/base2.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="records">
+	<div class="container">
+		<div class="line-records">
+			{% for record in records %}
+			<div class="record">
+				<div class="record-title">
+					{% if record.date.month == 1 %}
+					<span>Январь</span>
+					{% elif record.date.month == 2 %}
+					<span>Февраль</span>
+					{% elif record.date.month == 3 %}
+					<span>Март</span>
+					{% elif record.date.month == 4 %}
+					<span>Апрель</span>
+					{% elif record.date.month == 5 %}
+					<span>Май</span>
+					{% elif record.date.month == 6 %}
+					<span>Июнь</span>
+					{% elif record.date.month == 7 %}
+					<span>Июль</span>
+					{% elif record.date.month == 8 %}
+					<span>Август</span>
+					{% elif record.date.month == 9 %}
+					<span>Сентябрь</span>
+					{% elif record.date.month == 10 %}
+					<span>Октябрь</span>
+					{% elif record.date.month == 11 %}
+					<span>Ноябрь</span>
+					{% elif record.date.month == 12 %}
+					<span>Декабрь</span>
+					{% endif %}
+				</div>
+				<div class="record-content">
+					{% if record.date.weekday == 0 %}
+					<span class="day-week">Понедельник</span>
+					{% elif record.date.weekday == 1 %}
+					<span class="day-week">Вторник</span>
+					{% elif record.date.weekday == 2 %}
+					<span class="day-week">Среда</span>
+					{% elif record.date.weekday == 3 %}
+					<span class="day-week">Четверг</span>
+					{% elif record.date.weekday == 4 %}
+					<span class="day-week">Пятница</span>
+					{% elif record.date.weekday == 5 %}
+					<span class="day-week">Суббота</span>
+					{% elif record.date.weekday == 6 %}
+					<span class="day-week">Воскресенье</span>
+					{% endif %}
+					<br>
+					<span class="record-number">{{ record.date.day }}</span>
+					<br>
+					<span class="record-time">{{ record.time }}</span>
+					{% if record.occupied == False %}
+                    {% if user.is_authenticated %}
+					<div class="record-button">
+					    <a class="record-btn" href="{% url 'records:show_record' record.id %}">Записаться</a>
+				    </div>
+				    {% else %}
+				    <div class="record-button">
+					    <a class="record-btn" href="{% url 'users:login' %}">Записаться</a>
+				    </div>
+				    {% endif %}
+				    {% else %}
+				    <div class="record-button-occupied">
+					    <span class="record-occupied">Занято</span>
+				    </div>
+                    {% endif %}
+				</div>
+			</div>
+			{% empty %}
+            <span class="record-not"> Запись временно недоступна!</span>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+{% endblock content %}

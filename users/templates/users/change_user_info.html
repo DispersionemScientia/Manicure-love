@@ -1,0 +1,22 @@
+{% extends "records/base2.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="block-change-user-info">
+    <div class="container-register">
+        <div class=block-change-user-info-title">
+            <h2>Изменение личных данных</h2>
+        </div>
+        <div>
+            <form class="form-register" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button class="btn-show-record" type="submit"><span>Сохранить изменения</span></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

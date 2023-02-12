@@ -1,0 +1,722 @@
+.body {
+  margin: 0px;
+  background-color: #dad7d0;
+}
+
+.header {
+  padding-top:20px;
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+.container {
+  margin:0px 120px;
+}
+ .header-block {
+   display:flex;
+   align-items: center;
+ }
+
+ .nav {
+  display: flex;
+  align-items: center;
+ }
+
+.nav-item {
+  text-decoration:none;
+  color:white;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+  margin-right: 40px;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 120px;
+}
+
+.nav-user a {
+  text-decoration:none;
+  color:black;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px;
+  border:1px white solid;
+  border-radius: 10px;
+  background-color: orange;
+  margin-right: 20px;
+  transition: background-color 0.5s;
+}
+
+.nav-user a:hover {
+  background-color: red;
+}
+
+.background-home {
+  background: linear-gradient(#dad7d0, black);
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about-me-left-title {
+  color:black;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+}
+
+.about-me-left-text {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 20px;
+  width: 600px;
+}
+
+.about-me-right-title {
+  color:black;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.my-photo-block {
+  text-align: center;
+}
+
+.my-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px white solid;
+}
+
+.button {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.button a {
+  color:black;
+  text-decoration: none;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 30px;
+  border: 2px orange; solid;
+  border-radius: 10px;
+  background-color: orange;
+  padding: 10px;
+  box-shadow: 5px 5px 10px black;
+  transition: border 0.5s, background-color 0.5s;
+  animation: button-anim  2s infinite;
+}
+
+@keyframes button-anim {
+  from {
+    padding: 10px;
+  }
+  50% {
+    padding: 20px;
+  }
+  to {
+    padding: 10px;
+  }
+}
+
+.button a:hover {
+  background-color: red;
+  border: 2px red solid;
+}
+
+.block-my-works {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.title-my-work {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.title-my-work span {
+  
+}
+
+.line-photo-one {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.line-photo-two {
+  display: flex;
+}
+
+.line-photo-three {
+  display: flex;
+}
+
+.photo-card {
+  display: block;
+  margin: 20px auto;
+}
+
+.photo {
+  width: 380px;
+  height: 380px;
+  border: 5px white solid;
+  border-radius: 50%;
+}
+
+.block-price {
+  padding: 30px 0px;
+}
+
+.price-list {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.price {
+  max-width: 600px;
+  border-radius: 15px;
+  border:5px white solid;
+}
+
+.block-price-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.mail {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.number {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: white;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.mail-adress {
+  display: flex;
+  align-items: center;
+}
+
+.block-end {
+  padding-bottom: 20px;
+}
+
+.container-end {
+  margin: 0px 300px;
+}
+
+.records {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  background-color: #dad7d0;
+}
+
+.line-records {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.record {
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.record-title {
+  border: 2px black solid;
+  border-radius: 10px 10px 0px 0px;
+  background-color: red;
+  padding: 7px 25px;
+  text-align: center;
+}
+
+.record-title span {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: white;
+}
+
+.day-week {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.record-content {
+  border:2px black solid;
+  border-radius: 0px 0px 10px 10px;
+  background-color: whitesmoke;
+  padding: 0px 10px 10px 10px;
+  text-align: center;
+  width: 200px;
+  height: 230px;
+}
+
+.record-number {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 90px;
+  font-style: italic;
+  line-height: 60pt;
+}
+
+.record-time {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 50px;
+  font-style: italic;
+  line-height: 40pt;
+}
+
+.record-button {
+  margin-top: 15px;
+}
+
+.record-btn {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 25px;
+  text-decoration: none;
+  color:black;
+  padding: 5px 25px;
+  border: 2px black solid;
+  border-radius: 10px;
+  background-color: orange;
+  transition: background-color 0.5s, border 0.5s;
+}
+
+.record-btn:hover {
+  background-color: red;
+  border: 2px red solid;
+}
+
+.record-not {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 100px;
+}
+
+.record-button-occupied {
+  margin-top: 15px;
+}
+
+.record-occupied {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: red;
+  border: 2px black solid;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  padding: 5px 50px;
+}
+
+.block-show-records {
+  padding: 100px 0px;
+}
+
+.show-records {
+  border: 2px black solid;
+  border-radius: 10px;
+  background-color: white;
+  height: 300px;
+  width: 400px;
+  text-align: center;
+  margin: 0px auto;
+  box-shadow: 7px 7px 10px black;
+}
+
+.show-records-time {
+  margin-top: 50px;
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.show-records-date {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.form-show-record {
+  margin: 20px;
+}
+
+.btn-show-record {
+  background-color: orange;
+  border-radius: 10px;
+  padding: 5px;
+  transition: background-color 0.5s;
+  margin-top: 20px;
+}
+
+.btn-show-record span {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.btn-show-record:hover {
+  background-color: red;
+}
+
+.block-login-tittle {
+  margin: 20px 0px;
+  text-align: center;
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.form-login {
+  margin-top:20px;
+}
+
+.form-login label {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.form-login input {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 20px;
+  width: 95%;
+  padding: 3px;
+  box-sizing: border-box;
+  border:2px black solid;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+.form-login input:focus {
+  border:2px orange solid;
+}
+
+.container-register {
+  margin: 0px 300px;
+}
+
+.form-register {
+}
+
+.form-register label {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 25px;
+  width: 100%;
+}
+
+.form-register input {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+  padding: 3px;
+  box-sizing: border-box;
+  border:2px black solid;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+.form-register input:focus {
+  border:2px orange solid;
+}
+
+.helptext {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 0px;
+}
+
+.block-login {
+  padding-bottom: 100px;
+}
+
+.info-block {
+  height: 650px;
+  width: 500px;
+  border: 1px #dad7d0 solid;
+  background-color: white;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.title-info {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+}
+
+.info {
+  margin: 20px;
+}
+
+.info-p {
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.change-info-block {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.change-info {
+  text-decoration:none;
+  color:black;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px;
+  border:1px white solid;
+  border-radius: 10px;
+  background-color: orange;
+  transition: background-color 0.5s;
+}
+
+.change-info:hover {
+  background-color: red;
+}
+
+.info-flex {
+  display: flex;
+  align-items: flex-start;
+}
+
+.my-records {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.my-record {
+  height: 260px;
+  width: 300px;
+  border: 1px white solid;
+  background-color: white;
+  text-align: center;
+  margin: 10px;
+}
+
+.block-profile {
+  padding-bottom: 100px;
+}
+
+
+
+
+
+
+@media(max-width: 1200px) {
+  .about-me {
+    display: block;
+  }
+
+  .about-me-left-text {
+    width: auto;
+    margin-bottom: 90px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+
+  .container-end {
+    margin: 0px 100px;
+  }
+}
+
+
+
+
+
+@media(max-width: 1020px) {
+  .nav {
+    display: block;
+    width: 300px;
+ }
+
+ .about-me-left-text {
+    width: auto;
+    margin-bottom: 90px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .container-end {
+    margin: 0px 50px;
+  }
+
+  .container-register {
+    margin: 0px 200px;
+  }
+
+  .info-flex {
+    display: block;
+  }
+
+  .info-block {
+    margin: 0px auto;
+  }
+
+  .my-records {
+    justify-content: center
+  }
+}
+
+
+
+
+@media(max-width: 860px) {
+  .container {
+    margin: 0px 60px;
+  }
+
+  .container-register {
+    margin: 0px 100px;
+  }
+}
+
+
+
+
+
+
+@media(max-width: 740px) {
+  .header-block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-user {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+
+@media(max-width: 720px) {
+  .container {
+    margin: 0px 30px;
+  }
+
+  .price {
+    max-width: 400px;
+  }
+
+  .photo {
+  width: 300px;
+  height: 300px;
+  }
+
+  .title-my-work {
+    font-size: 40px;
+  }
+
+  .about-me-left-title {
+    font-size: 40px;
+  }
+
+  .contact {
+    display: block;
+  }
+
+  .phone-number {
+    justify-content: center;
+  }
+
+  .mail-adress {
+    justify-content: center;
+  }
+
+  .block-login-tittle {
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+
+@media(max-width: 500px) {
+  .about-me-left-text {
+    font-size: 18px;
+  }
+
+  .container-register {
+    margin: 0px 50px;
+  }
+}
+
+
+
+
+
+
+@media(max-width: 470px) {
+  .price {
+    max-width: 300px;
+  }
+
+  .nav {
+    width: 270px
+  }
+}

@@ -1,0 +1,30 @@
+{% extends "records/base2.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="block-login">
+    <div class="container-register">
+        <div class="block-login-tittle">
+            <h2>Регистрация</h2>
+        </div>
+        <div>
+            <form class="form-register" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="hidden" name="next" value="{{ next }}">
+            <button class="btn-show-record" type="submit"><span>Зарегестрироваться</span></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+
+
+
+
+

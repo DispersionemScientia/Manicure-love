@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Маникюр Любовь{% endblock title %}</title>
+    <link href="{% static 'base.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="body">
+
+<div class="header">
+    <div class="container">
+        <div class="header-block">
+            <div class="logo">
+                <img class="logo-img" src="{% static 'logo.jpg' %}" alt="">
+            </div>
+            <div class="nav">
+                <a class="nav-item" href="{% url 'records:home' %}">Маникюр | К-510 | Любовь</a>
+                {% if user.is_admin %}
+                <a class="nav-item" href="{% url 'users:administration' %}">Администрирование</a>
+                {% endif %}
+            </div>
+            {% if user.is_authenticated %}
+            <div class='nav-user'>
+                <a href="{% url 'users:profile' user.id %}">Профиль</a>
+                <a href="{% url 'users:logout' %}">Выход</a>
+            </div>
+             {% else %}
+            <div class='nav-user'>
+                <a href="{% url 'users:register' %}">Регистрация</a>
+                <a href="{% url 'users:login' %}">Вход</a>
+            </div>
+            {% endif %}
+        </div>     
+    </div>
+</div>
+{% block content %}
+
+{% endblock content %}
+</body>
+</html>
