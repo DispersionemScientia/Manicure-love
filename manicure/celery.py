@@ -11,7 +11,7 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'record_not_active': {
         'task': 'records.tasks.record_not_active',
-        # 'schedule': crontab(minute=0, hour='*/1'),
-        'schedule': crontab(),
+        'schedule': crontab(minute=0, hour='*/1'),
+        # 'schedule': crontab(),
     },
 }
