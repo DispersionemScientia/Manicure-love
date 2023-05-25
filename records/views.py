@@ -6,7 +6,9 @@ from django.views.generic.detail import DetailView
 from users.models import User
 from .models import Record
 from .forms import RecordForm
+from .serializers import RecordSerializer, RecordOccupiedSerializer
 from .tasks import record_created, record_canceled
+from rest_framework import generics
 
 class RecordView(ListView):
     model = Record
@@ -71,4 +73,13 @@ def cansel_record(request, record_pk):
     record.save()
     record_canceled(record_id=record_pk, user_id=request.user.id)
     return redirect('records:home')
+
+class RecordAPIView(generics.ListAPIView):
+    queryset = Record.objects.filter(is_active=True).order_by('date', 'time')
+    serializer_class = RecordSerializer
+
+class RecordUpdateAPIView(generics.UpdateAPIView):
+    queryset = Record.objects.filter(is_active=True).order_by('date', 'time')
+    serializer_class = RecordOccupiedSerializer
+
 
