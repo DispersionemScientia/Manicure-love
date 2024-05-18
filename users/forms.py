@@ -9,10 +9,10 @@ class UserForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'last_name', 'birth_date', 'telephon_number']
+        fields = ['username', 'email', 'first_name', 'last_name', 'birth_date', 'telephone_number']
         labels = {'username': 'Имя пользователя'}
 
 class ChangeUserInfoForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['email', 'first_name', 'last_name', 'birth_date', 'telephon_number']
+        fields = ['email', 'first_name', 'last_name', 'birth_date', 'telephone_number']

@@ -8,7 +8,7 @@ class UserAccountManager(UserManager):
     def create_superuser(self, username, email=None, password=None, **extra_fields):
         extra_fields['is_staff'] = True
         extra_fields['is_superuser'] = True
-        extra_fields['telephon_number'] = '00000000000'
+        extra_fields['telephone_number'] = '00000000000'
         extra_fields['birth_date'] = '1999-01-01'
 
         if extra_fields.get("is_staff") is not True:
@@ -20,9 +20,9 @@ class UserAccountManager(UserManager):
 
 class User(AbstractUser):
     objects = UserAccountManager()
-    telephon_number_regex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
-    telephon_number = models.CharField(
-        validators=[telephon_number_regex],
+    telephone_number_regex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
+    telephone_number = models.CharField(
+        validators=[telephone_number_regex],
         max_length=16,
         unique=True,
         null=True,
