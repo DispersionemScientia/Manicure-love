@@ -14,7 +14,7 @@
 База данных пользователей
 {% for user in users %}
 <p>
-    <a href="{% url 'users:profile' user.id %}">{{ user.username }}</a> - {{ user.first_name }} {{ user.last_name }} Номер телефона: {{ user.telephon_number}}
+    <a href="{% url 'users:profile' user.id %}">{{ user.username }}</a> - {{ user.first_name }} {{ user.last_name }} Номер телефона: {{ user.telephone_number}}
     Дата регистрации: {{ user.date_joined}} Последний вход: {{ user.last_login}}
 </p>
 {% endfor %}

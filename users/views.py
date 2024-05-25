@@ -36,7 +36,7 @@ class ChangeUserInfoView(LoginRequiredMixin, UpdateView, SuccessMessageMixin):
     template_name = 'users/change_user_info.html'
     form_class = ChangeUserInfoForm
     success_url = reverse_lazy('records:home')
-    success_message = 'Данные пользователя успешно имзменены!'
+    success_message = 'Данные пользователя успешно изменены!'
 
     def setup(self, request, *args, **kwargs):     # выполняется самым первым и инициализирует объект контроллера
         self.user_id = request.user.pk             # переопределяя сохраняем первичный ключ юзера
